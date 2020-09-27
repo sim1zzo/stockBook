@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Security;
 using StockBook.DataAccess.Repository;
 using StockBook.DataAccess.Repository.IRepository;
 using StockBook.Models;
@@ -72,6 +73,19 @@ namespace StockBook.Areas.Admin.Controllers
         {
             var objFromDb = _unitOfWork.Category.GetAll();
             return Json(new { data = objFromDb });
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var objFromDb = _unitOfWork.Category.Get(id);
+            if (objFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            _unitOfWork.Category.Remove(objFromDb);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Delete Successful" });
         }
 
         #endregion
