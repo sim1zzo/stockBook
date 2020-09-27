@@ -4,6 +4,6 @@ C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\bin\Debug\netcoreapp3.1\Stock
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\obj\Debug\netcoreapp3.1\StockBook.Models.csprojAssemblyReference.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\obj\Debug\netcoreapp3.1\StockBook.Models.AssemblyInfoInputs.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\obj\Debug\netcoreapp3.1\StockBook.Models.AssemblyInfo.cs
-C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\obj\Debug\netcoreapp3.1\StockBook.Models.csproj.CoreCompileInputs.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\obj\Debug\netcoreapp3.1\StockBook.Models.dll
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\obj\Debug\netcoreapp3.1\StockBook.Models.pdb
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Models\obj\Debug\netcoreapp3.1\StockBook.Models.csproj.CoreCompileInputs.cache
