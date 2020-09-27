@@ -440,3 +440,10 @@ C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewStart.cshtml.g.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Dapper.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\NPOI.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
