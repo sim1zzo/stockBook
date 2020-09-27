@@ -2401,6 +2401,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore": "3.1.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "StockBook.Models": "1.0.0",
           "StockBook.Utility": "1.0.0"
         },
