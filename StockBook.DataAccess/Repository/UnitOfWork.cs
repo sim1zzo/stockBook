@@ -1,13 +1,12 @@
-﻿using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using Org.BouncyCastle.Asn1.Crmf;
-using StockBook.DataAccess.Data;
+﻿using StockBook.DataAccess.Data;
+using StockBook.DataAccess.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StockBook.DataAccess.Repository.IRepository
+namespace StockBook.DataAccess.Repository
 {
-    public class UnitOfWork :IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
 
@@ -16,7 +15,7 @@ namespace StockBook.DataAccess.Repository.IRepository
             _db = db;
             Category = new CategoryRepository(_db);
             SP_Call = new SP_Call(_db);
-            
+
         }
 
 
@@ -26,7 +25,7 @@ namespace StockBook.DataAccess.Repository.IRepository
         public void Dispose()
         {
             _db.Dispose();
-            
+
         }
 
         public void Save()

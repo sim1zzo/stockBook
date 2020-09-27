@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StockBook.DataAccess.Data;
 using StockBook.DataAccess.Repository.IRepository;
+using StockBook.DataAccess.Repository;
 
 namespace StockBook
 {
