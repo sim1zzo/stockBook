@@ -1,0 +1,9 @@
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\bin\Debug\netcoreapp3.1\StockBook.Utility.deps.json
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\bin\Debug\netcoreapp3.1\StockBook.Utility.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\bin\Debug\netcoreapp3.1\StockBook.Utility.pdb
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.csprojAssemblyReference.cache
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.AssemblyInfoInputs.cache
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.AssemblyInfo.cs
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.csproj.CoreCompileInputs.cache
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.pdb
