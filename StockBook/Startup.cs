@@ -14,6 +14,8 @@ using Microsoft.Extensions.Hosting;
 using StockBook.DataAccess.Data;
 using StockBook.DataAccess.Repository.IRepository;
 using StockBook.DataAccess.Repository;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using StockBook.Utility;
 
 namespace StockBook
 {
@@ -32,8 +34,9 @@ namespace StockBook
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
