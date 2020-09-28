@@ -10,6 +10,8 @@ using StockBook.DataAccess.Repository.IRepository;
 using StockBook.Models;
 using StockBook.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.IO;
+using NPOI.HSSF.Record.Chart;
 
 namespace StockBook.Areas.Admin.Controllers
 {
@@ -59,29 +61,65 @@ namespace StockBook.Areas.Admin.Controllers
             return View(productVM);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Upsert(Product product)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        if (product.Id == 0)
-        //        {
-        //            _unitOfWork.Product.Add(product);
-                    
-        //        }
-        //        else
-        //        {
-        //            _unitOfWork.Product.Update(product);
-        //        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(ProductVM productVM)
+        {
+            if (ModelState.IsValid)
+            {
 
-        //        _unitOfWork.Save();
-        //        return RedirectToAction(nameof(Index));       
-        //    }
-        //    return View(product);
-        //}
+                string webRootPath = _hostEnvironment.WebRootPath;
+                var files = HttpContext.Request.Form.Files;
+                if (files.Count > 0)
+                {
+                    string fileName = Guid.NewGuid().ToString();
+                    var upload = Path.Combine(webRootPath, @"images\products");
+                    var extension = Path.GetExtension(files[0].FileName);
 
-        
+                    if (productVM.Product.ImageUrl!=null)
+                    {
+                        //this is an edit we need to remove old image
+
+                        var imagePath = Path.Combine(webRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(imagePath))
+                        {
+                            System.IO.File.Delete(imagePath);
+                        }
+                    }
+
+                    using(var fileStreams = new FileStream(Path.Combine(upload, fileName+extension),FileMode.Create))
+                    {
+                        files[0].CopyTo(fileStreams);
+                    }
+                    productVM.Product.ImageUrl = @"\images\products\" + fileName + extension;
+                }
+                else
+                {
+                    //update when they do not change the image
+                    if(productVM.Product.Id!=0)
+                    {
+                        Product objFromDb = _unitOfWork.Product.Get(productVM.Product.Id);
+                        productVM.Product.ImageUrl = objFromDb.ImageUrl;
+                    }
+                }
+
+                if (productVM.Product.Id == 0)
+                {
+                    _unitOfWork.Product.Add(productVM.Product);
+
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(productVM.Product);
+                }
+
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(productVM);
+        }
+
+
 
         #region API CALLS
 
@@ -98,6 +136,12 @@ namespace StockBook.Areas.Admin.Controllers
             if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Error while deleting" });
+            }
+            string webRootPath = _hostEnvironment.WebRootPath;
+            var imagePath = Path.Combine(webRootPath, objFromDb.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(imagePath))
+            {
+                System.IO.File.Delete(imagePath);
             }
             _unitOfWork.Product.Remove(objFromDb);
             _unitOfWork.Save();
