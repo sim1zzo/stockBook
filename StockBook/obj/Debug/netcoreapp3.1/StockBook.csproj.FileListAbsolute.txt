@@ -456,3 +456,4 @@ C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Upsert.cshtml.g.cs
