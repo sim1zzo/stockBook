@@ -51,6 +51,12 @@ namespace StockBook
                 options.AppId = "1013174829107491";
                 options.AppSecret = "a97d0469a622c7f8bb993f5538c959e9";
             });
+
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                options.ClientId = "857759450310-3pb90d5aq8hf8oavc2bnni22s9e96aq0.apps.googleusercontent.com";
+                options.ClientSecret = "3xwQCwPU5BPRJW-2BNbZyCAQ";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
