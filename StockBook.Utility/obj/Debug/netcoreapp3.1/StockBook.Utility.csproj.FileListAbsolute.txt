@@ -6,4 +6,3 @@ C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\Stoc
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.AssemblyInfo.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.dll
 C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.pdb
-C:\Users\S1\Desktop\StockBook-MVC\StockBook.Utility\obj\Debug\netcoreapp3.1\StockBook.Utility.csproj.CoreCompileInputs.cache
