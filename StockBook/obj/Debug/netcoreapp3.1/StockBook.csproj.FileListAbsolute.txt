@@ -1,9 +1,6 @@
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.csprojAssemblyReference.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.AssemblyInfoInputs.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.AssemblyInfo.cs
-C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
-C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.RazorAssemblyInfo.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.RazorAssemblyInfo.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -498,3 +495,8 @@ C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache

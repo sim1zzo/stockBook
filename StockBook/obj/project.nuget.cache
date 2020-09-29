@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6gKoBJ75T2nYvGl0fOlKVBac3oqG07Wq5vUpdTklY6yjLMZXm13gNQu7SV3fJTAaYhfdD231sT6Zd6gf714KBg==",
+  "dgSpecHash": "zrdi7zZRykD0SM0LVVPRE5c9YeXKOLCgDAohQLghQ77+eLfynwBQ8pg8ED63C/IX1GwNwbkEwt9HBRCRJ8mhWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook\\StockBook.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.8\\microsoft.aspnetcore.authentication.facebook.3.1.8.nupkg.sha512",
+    "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.8\\microsoft.aspnetcore.authentication.google.3.1.8.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.8\\microsoft.aspnetcore.cryptography.internal.3.1.8.nupkg.sha512",

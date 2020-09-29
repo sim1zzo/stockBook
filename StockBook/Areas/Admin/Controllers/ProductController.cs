@@ -12,10 +12,13 @@ using StockBook.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.IO;
 using NPOI.HSSF.Record.Chart;
+using Microsoft.AspNetCore.Authorization;
+using StockBook.Utility;
 
 namespace StockBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

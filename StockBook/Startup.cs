@@ -40,6 +40,17 @@ namespace StockBook
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Identity/Account/Login";
+                options.LogoutPath = $"/Identity/Account/Logout";
+                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+            });
+            services.AddAuthentication().AddFacebook(options =>
+            {
+                options.AppId = "1013174829107491";
+                options.AppSecret = "a97d0469a622c7f8bb993f5538c959e9";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
