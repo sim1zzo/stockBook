@@ -13,6 +13,8 @@ namespace StockBook.Utility
         public const string Role_Admin = "Admin"; //can manage the content of the web site 
         public const string Role_Employee = "Employee";//able to change the status of the packages payment and so on.
 
+        public const string ssShoppingCart = "Shopping Cart Session";
+
 
         public static double GetPriceBasedOnQuantity(double quantity, double price, double price50, double price100)
         {

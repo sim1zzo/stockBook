@@ -58,6 +58,13 @@ namespace StockBook
                 options.ClientId = "857759450310-3pb90d5aq8hf8oavc2bnni22s9e96aq0.apps.googleusercontent.com";
                 options.ClientSecret = "3xwQCwPU5BPRJW-2BNbZyCAQ";
             });
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,6 +85,7 @@ namespace StockBook
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthentication();
             app.UseAuthorization();

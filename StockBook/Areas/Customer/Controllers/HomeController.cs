@@ -5,11 +5,13 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StockBook.DataAccess.Repository.IRepository;
 using StockBook.Models;
 using StockBook.Models.ViewModels;
+using StockBook.Utility;
 
 namespace StockBook.Areas.Customer.Controllers
 {
@@ -28,6 +30,20 @@ namespace StockBook.Areas.Customer.Controllers
         public IActionResult Index()
         {
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            if (claim!=null) //claim can be null if user has not logged in
+            {
+                var count = _unitOfWork.ShoppingCart
+                    .GetAll(c => c.ApplicationUserId == claim.Value)
+                    .ToList()
+                    .Count();
+
+                HttpContext.Session.SetInt32(SD.ssShoppingCart, count);
+
+            }
+
             return View(productList);
         }
 
@@ -89,6 +105,14 @@ namespace StockBook.Areas.Customer.Controllers
                 }
 
                 _unitOfWork.Save();
+
+                var count = _unitOfWork.ShoppingCart
+                    .GetAll(c => c.ApplicationUserId == CartObject.ApplicationUserId)
+                    .ToList()
+                    .Count();
+
+                //HttpContext.Session.SetObject(SD.ssShoppingCart, count);
+                HttpContext.Session.SetInt32(SD.ssShoppingCart, count);
 
                 return RedirectToAction(nameof(Index));
 
