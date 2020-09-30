@@ -500,3 +500,5 @@ C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Microsoft.As
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\SendGrid.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll
