@@ -16,6 +16,7 @@ using StockBook.DataAccess.Repository.IRepository;
 using StockBook.DataAccess.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using StockBook.Utility;
+using Stripe;
 
 namespace StockBook
 {
@@ -38,6 +39,7 @@ namespace StockBook
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddSingleton<IEmailSender, EmailSender>();
             services.Configure<EmailOptions>(Configuration);
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
@@ -85,8 +87,8 @@ namespace StockBook
             app.UseStaticFiles();
 
             app.UseRouting();
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
             app.UseSession();
-
             app.UseAuthentication();
             app.UseAuthorization();
 

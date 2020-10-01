@@ -1810,6 +1810,20 @@
           "lib/netstandard2.1/StarkbankEcdsa.dll": {}
         }
       },
+      "Stripe.net/39.10.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "Newtonsoft.Json": "11.0.1",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Stripe.net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Stripe.net.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5978,6 +5992,25 @@
         "lib/netstandard2.1/StarkbankEcdsa.dll",
         "starkbank-ecdsa.1.2.0.nupkg.sha512",
         "starkbank-ecdsa.nuspec"
+      ]
+    },
+    "Stripe.net/39.10.0": {
+      "sha512": "pRNd4gTHDWcMiKmRl5xDdCBpAUUqur+/YVg3jiA/8M26Z+P3ER/EXT1GEKICT39BI4Oy5tnnFI8jtpX0Kx0L5A==",
+      "type": "package",
+      "path": "stripe.net/39.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net461/Stripe.net.dll",
+        "lib/net461/Stripe.net.pdb",
+        "lib/net461/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.pdb",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.39.10.0.nupkg.sha512",
+        "stripe.net.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -10313,7 +10346,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
       "StockBook.DataAccess >= 1.0.0",
       "StockBook.Models >= 1.0.0",
-      "StockBook.Utility >= 1.0.0"
+      "StockBook.Utility >= 1.0.0",
+      "Stripe.net >= 39.10.0"
     ]
   },
   "packageFolders": {
@@ -10398,6 +10432,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.4, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[39.10.0, )"
           }
         },
         "imports": [

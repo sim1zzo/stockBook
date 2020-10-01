@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0TgPeFboeDuZ9MMqBt1v+uykWmA/+CNQVRkXhegLpkcBj+46872Qe0knR7CeL+tXvR/AruVca6mNDkx1++2flw==",
+  "dgSpecHash": "pB47EfuEwshU8h/X4gMnAIkL52FLZYUGDgx2ARq7rdIzMs0G99DJ6MrRHGdKc/z1Uz4Ib1piAl8pbGSgC2Krdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook\\StockBook.csproj",
   "expectedPackageFiles": [
@@ -129,6 +129,7 @@
     "C:\\Users\\S1\\.nuget\\packages\\sendgrid\\9.21.0\\sendgrid.9.21.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
+    "C:\\Users\\S1\\.nuget\\packages\\stripe.net\\39.10.0\\stripe.net.39.10.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

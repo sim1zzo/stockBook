@@ -497,11 +497,12 @@ C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
-C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
-C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\SendGrid.dll
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Index.cshtml.g.cs
 C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Summary.cshtml.g.cs
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\bin\Debug\netcoreapp3.1\Stripe.net.dll
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\S1\Desktop\StockBook-MVC\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache
