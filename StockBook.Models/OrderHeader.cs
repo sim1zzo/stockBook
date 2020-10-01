@@ -39,6 +39,8 @@ namespace StockBook.Models
          * all these attributes might already exist in application user
          * although we are adding them here becase the shopping address can be different.
          */
+
+
         public string PhoneNumber { get; set; }
         public string StreetAddress { get; set; }
         public string City { get; set; }

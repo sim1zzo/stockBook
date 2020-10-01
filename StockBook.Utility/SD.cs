@@ -48,7 +48,6 @@ namespace StockBook.Utility
                 }
                 if (let == '>')
                 {
-                    inside = false;
                     break;
                 }
 
