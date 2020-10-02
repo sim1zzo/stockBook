@@ -9,6 +9,7 @@ using StockBook.DataAccess.Repository.IRepository;
 using StockBook.Models;
 using StockBook.Models.ViewModels;
 using StockBook.Utility;
+using Stripe;
 
 namespace StockBook.Areas.Admin.Controllers
 {
@@ -41,6 +42,65 @@ namespace StockBook.Areas.Admin.Controllers
             };
             return View(OrderVM);
         }
+
+        [Authorize(Roles =SD.Role_Admin + "," + SD.Role_Employee)]
+        public IActionResult StartProcessing(int id)
+        {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(o => o.Id == id);
+            orderHeader.OrderStatus = SD.StatusInProcess;
+            _unitOfWork.Save();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
+        public IActionResult ShipOrder(int id)
+        {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(o => o.Id == id);
+            orderHeader.TrackingNumber = OrderVM.OrderHeader.TrackingNumber;
+            orderHeader.Carrier = OrderVM.OrderHeader.Carrier;
+            orderHeader.OrderStatus = SD.StatusShipped;
+            orderHeader.ShippingDate = DateTime.Now;
+
+            orderHeader.OrderStatus = SD.StatusInProcess;
+            _unitOfWork.Save();
+            return RedirectToAction("Index");
+        }
+
+
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
+        public IActionResult CancelOrder(int id)
+        {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(o => o.Id == id);
+
+            if (orderHeader.PaymentStatus == SD.StatusApproved)
+            {
+                RefundCreateOptions options = new RefundCreateOptions
+                {
+                    Amount = Convert.ToInt32(orderHeader.OrderTotal * 100),
+                    Reason = RefundReasons.RequestedByCustomer,
+                    Charge = orderHeader.TransactionId
+                };
+                var service = new RefundService();
+                var refund = service.Create(options);
+
+                orderHeader.OrderStatus = SD.StatusRefunded;
+                orderHeader.PaymentStatus = SD.StatusRefunded;
+                
+            }
+            else
+            {
+                orderHeader.OrderStatus = SD.StatusCancelled;
+                orderHeader.OrderStatus = SD.StatusCancelled;
+            }
+
+            _unitOfWork.Save();
+            return RedirectToAction("Index");
+        }
+
+
+
+
 
 
 
