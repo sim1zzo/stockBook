@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oxh1rv64iWIlZmJO1ooxZcbrxpA/pD2h/yHzQH+x2lhGAiQW9hiAYwDJQeYgJh6UCt1KH9A7LL0nVVp2y54BmA==",
+  "dgSpecHash": "J+Ke0yf0VKWXTo0nYkQRAKY4D5sGH5N+2c/YkqALpiCpadQYGrcZXFl6lfLWyVl91aAlhreOmuLdmJ9LK4PskA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.Models\\StockBook.Models.csproj",
+  "projectFilePath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.Models\\StockBook.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zah8qHFGbWFQiYh7vHVzXMfm708Rpo/7xA9iwxv6JHokupvBsPsqgXBcjlqA07e1M3XHE9OSXRrIw8Up1uGbkg==",
+  "dgSpecHash": "NybHLQRIoXjifBO3YaXw5kA1/p2vRkUTJasp0xsyksXkTpyGUr6imCe+T6Jd1ibAF/znTuKYS41GcLs9Y0r5/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.DataAccess\\StockBook.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.DataAccess\\StockBook.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S1\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

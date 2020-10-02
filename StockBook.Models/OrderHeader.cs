@@ -34,19 +34,27 @@ namespace StockBook.Models
 
         public string TransactionId { get; set; }
 
+        public string PaymentStatus { get; set; }
+
+        public string OrderStatus { get; set; }
+
 
         /*
          * all these attributes might already exist in application user
          * although we are adding them here becase the shopping address can be different.
          */
 
-
+        [Required]
         public string PhoneNumber { get; set; }
+        [Required]
         public string StreetAddress { get; set; }
+        [Required]
         public string City { get; set; }
+        [Required]
         public string State { get; set; }
-
+        [Required]
         public string PostalCode { get; set; }
+        [Required]
         public string Name { get; set; }
 
 

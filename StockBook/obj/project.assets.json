@@ -10356,11 +10356,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook\\StockBook.csproj",
+      "projectUniqueName": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook\\StockBook.csproj",
       "projectName": "StockBook",
-      "projectPath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook\\StockBook.csproj",
+      "projectPath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook\\StockBook.csproj",
       "packagesPath": "C:\\Users\\S1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook\\obj\\",
+      "outputPath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\S1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10376,14 +10376,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.DataAccess\\StockBook.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.DataAccess\\StockBook.DataAccess.csproj"
+            "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.DataAccess\\StockBook.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.DataAccess\\StockBook.DataAccess.csproj"
             },
-            "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.Models\\StockBook.Models.csproj": {
-              "projectPath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.Models\\StockBook.Models.csproj"
+            "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.Models\\StockBook.Models.csproj": {
+              "projectPath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.Models\\StockBook.Models.csproj"
             },
-            "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.Utility\\StockBook.Utility.csproj": {
-              "projectPath": "C:\\Users\\S1\\Desktop\\StockBook-MVC\\StockBook.Utility\\StockBook.Utility.csproj"
+            "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.Utility\\StockBook.Utility.csproj": {
+              "projectPath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook.Utility\\StockBook.Utility.csproj"
             }
           }
         }
