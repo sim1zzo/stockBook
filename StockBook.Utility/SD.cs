@@ -27,8 +27,7 @@ namespace StockBook.Utility
         public const string PaymentStatusDelayPayment = "ApprovedForDelayPayment";
         public const string PaymentStatusRejected = "Rejected";
 
-
-
+       
 
         public static double GetPriceBasedOnQuantity(double quantity, double price, double price50, double price100)
         {
