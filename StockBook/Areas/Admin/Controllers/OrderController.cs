@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StockBook.DataAccess.Repository.IRepository;
 using StockBook.Models;
+using StockBook.Models.ViewModels;
 using StockBook.Utility;
 
 namespace StockBook.Areas.Admin.Controllers
@@ -16,6 +17,10 @@ namespace StockBook.Areas.Admin.Controllers
     public class OrderController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+
+        [BindProperty]
+        public OrderDetailsVM OrderVM { get; set; }
+
         public OrderController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -23,6 +28,18 @@ namespace StockBook.Areas.Admin.Controllers
         public IActionResult Index()
         {
             return View();
+        } 
+        
+        
+        public IActionResult Details(int id)
+        {
+            OrderVM = new OrderDetailsVM()
+            {
+                OrderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id, includeProperties: "ApplicationUser"),
+                OrderDetails = _unitOfWork.OrderDetails.GetAll(o => o.OrderId == id, includeProperties: "Product")
+
+            };
+            return View(OrderVM);
         }
 
 

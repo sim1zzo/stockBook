@@ -1016,3 +1016,4 @@ C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Sto
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.genruntimeconfig.cache
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\OrderConfirmation.cshtml.g.cs
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Details.cshtml.g.cs
