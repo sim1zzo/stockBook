@@ -1019,3 +1019,4 @@ C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\bin\Debug\netcoreapp3.1\Twi
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\UserName\Default.cshtml.g.cs
