@@ -1020,3 +1020,6 @@ C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Sto
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\UserName\Default.cshtml.g.cs
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.StockBook20201003161752 - Web Deploy.json
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\StockBook20201003161752 - Web Deploy\mssql1.arm.json
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\StockBook20201003161752 - Web Deploy\profile.arm.json

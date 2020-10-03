@@ -1,0 +1,14 @@
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\bin\Release\netcoreapp3.1\StockBook.DataAccess.deps.json
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\bin\Release\netcoreapp3.1\StockBook.DataAccess.dll
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\bin\Release\netcoreapp3.1\StockBook.DataAccess.pdb
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\bin\Release\netcoreapp3.1\StockBook.Models.dll
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\bin\Release\netcoreapp3.1\StockBook.Utility.dll
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\bin\Release\netcoreapp3.1\StockBook.Models.pdb
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\bin\Release\netcoreapp3.1\StockBook.Utility.pdb
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\obj\Release\netcoreapp3.1\StockBook.DataAccess.csprojAssemblyReference.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\obj\Release\netcoreapp3.1\StockBook.DataAccess.AssemblyInfoInputs.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\obj\Release\netcoreapp3.1\StockBook.DataAccess.AssemblyInfo.cs
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\obj\Release\netcoreapp3.1\StockBook.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\obj\Release\netcoreapp3.1\StockBook.DataAccess.csproj.CopyComplete
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\obj\Release\netcoreapp3.1\StockBook.DataAccess.dll
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.DataAccess\obj\Release\netcoreapp3.1\StockBook.DataAccess.pdb

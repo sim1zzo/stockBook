@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using StockBook.Utility;
 using Stripe;
 using BulkyBook.Utility;
+using StockBook.DataAccess.Initializer;
 
 namespace StockBook
 {
@@ -43,6 +44,7 @@ namespace StockBook
             services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
             services.Configure<TwilioSettings>(Configuration.GetSection("Twilio"));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
             services.ConfigureApplicationCookie(options =>
@@ -72,7 +74,7 @@ namespace StockBook
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -93,6 +95,7 @@ namespace StockBook
             app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
+            dbInitializer.Initialize();
 
             app.UseEndpoints(endpoints =>
             {

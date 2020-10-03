@@ -1,0 +1,9 @@
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\bin\Release\netcoreapp3.1\StockBook.Models.deps.json
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\bin\Release\netcoreapp3.1\StockBook.Models.dll
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\bin\Release\netcoreapp3.1\StockBook.Models.pdb
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\obj\Release\netcoreapp3.1\StockBook.Models.csprojAssemblyReference.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\obj\Release\netcoreapp3.1\StockBook.Models.AssemblyInfoInputs.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\obj\Release\netcoreapp3.1\StockBook.Models.AssemblyInfo.cs
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\obj\Release\netcoreapp3.1\StockBook.Models.csproj.CoreCompileInputs.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\obj\Release\netcoreapp3.1\StockBook.Models.dll
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook.Models\obj\Release\netcoreapp3.1\StockBook.Models.pdb

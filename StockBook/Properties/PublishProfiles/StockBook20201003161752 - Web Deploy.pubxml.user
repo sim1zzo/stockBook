@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQEFrWuqPnE6M6t2WiIQEagAAAAACAAAAAAAQZgAAAAEAACAAAACTHR0ZbsrlCvqraHuVn8IQWrPoVwf/qOEZUUVHYohqoQAAAAAOgAAAAAIAACAAAADeUoXhfxJmcdIR9kvwJrlkK0eYl8mS3YBc/ygi4e0cbIAAAAAhKQKy+If0qMGAYaoeA4dw1PFE2iLUtXl6LbGW5fEw1UfqMwZlxPTtT+c8lmfe+Bcj03GuWmwaDhB+MCROIs6F/FaWkXE2Ym4Gb0BXtnvp9vvb40QUaqUf3PDK4e5wy9mwEA1T5W62lE423jhd1lfF33odgh4oR1b9/6Vn+61jXUAAAACwoGwAzYESbjUh73QMpcKHNSu70RLqBJycN7arZ8G5zl8fZOkhMi6yZMYO3L1vXzZVue3XGZi0rFa/QYEtQ6v4</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:stockbookdbserver.database.windows.net,1433%3bInitial Catalog=StockBook_db%3bUser Id=StockBook%40stockbookdbserver%3bPassword=Admin123%2a</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
