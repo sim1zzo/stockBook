@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using BulkyBook.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -13,11 +14,14 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using StockBook.DataAccess.Repository.IRepository;
 using StockBook.Models;
 using StockBook.Models.ViewModels;
 using StockBook.Utility;
 using Stripe;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace StockBook.Areas.Customer.Controllers
 {
@@ -26,16 +30,19 @@ namespace StockBook.Areas.Customer.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IEmailSender _emailSender;
+
+        private TwilioSettings _twilioOptions { get; set; }
         private readonly UserManager<IdentityUser> _userManager;
 
         [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
 
-        public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender, UserManager<IdentityUser> userManager)
+        public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender, UserManager<IdentityUser> userManager, IOptions<TwilioSettings> twilioSettings)
         {
             _unitOfWork = unitOfWork;
             _emailSender = emailSender;
             _userManager = userManager;
+            _twilioOptions = twilioSettings.Value;
         }
 
 
@@ -286,6 +293,21 @@ namespace StockBook.Areas.Customer.Controllers
 
         public IActionResult OrderConfirmation(int id)
         {
+            var orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(o => o.Id == id);
+            TwilioClient.Init(_twilioOptions.AccountSid, _twilioOptions.AuthToken);
+            try
+            {
+                var message = MessageResource.Create(
+                    body: "Order Placed on Stock Book. Your Order ID " + id,
+                    from: new Twilio.Types.PhoneNumber(_twilioOptions.PhoneNumber),
+                    to: new Twilio.Types.PhoneNumber(orderHeader.PhoneNumber)
+                    );
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
             return View(id);
         }
 

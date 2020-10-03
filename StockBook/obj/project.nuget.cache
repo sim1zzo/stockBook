@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PiCaVV/s8n4Qq1CgIPAs8BJj6tj9H2V/h3sm2fOWM+R3/9T6z/+MgO/O3VTtvtUHL+9pIMHorzilSz4XwrjsSQ==",
+  "dgSpecHash": "b3izKiCSOnhVZnAA8g/z1UtLsu79AdgUglMKaxBv6vEjADclkL4/H+wJ2RMGqdib2a+D1XRw9J9p9lAJq5miqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\S1\\Source\\Repos\\sim1zzo\\stockBook\\StockBook\\StockBook.csproj",
   "expectedPackageFiles": [
@@ -219,7 +219,8 @@
     "C:\\Users\\S1\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\S1\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\S1\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\S1\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\S1\\.nuget\\packages\\twilio\\5.47.2\\twilio.5.47.2.nupkg.sha512"
   ],
   "logs": []
 }

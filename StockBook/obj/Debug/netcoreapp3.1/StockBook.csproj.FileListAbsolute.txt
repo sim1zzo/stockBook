@@ -932,9 +932,6 @@ C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\bin\Debug\netcoreapp3.1\Sto
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.csprojAssemblyReference.cache
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.AssemblyInfoInputs.cache
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.AssemblyInfo.cs
-C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
-C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.RazorAssemblyInfo.cache
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.RazorAssemblyInfo.cs
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.TagHelpers.input.cache
@@ -1017,3 +1014,8 @@ C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Sto
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\OrderConfirmation.cshtml.g.cs
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
 C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Details.cshtml.g.cs
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewStart.cshtml.g.cs
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\bin\Debug\netcoreapp3.1\Twilio.dll
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.csproj.CoreCompileInputs.cache
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\S1\Source\Repos\sim1zzo\stockBook\StockBook\obj\Debug\netcoreapp3.1\StockBook.MvcApplicationPartsAssemblyInfo.cache

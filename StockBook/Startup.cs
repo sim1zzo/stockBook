@@ -17,6 +17,7 @@ using StockBook.DataAccess.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using StockBook.Utility;
 using Stripe;
+using BulkyBook.Utility;
 
 namespace StockBook
 {
@@ -40,6 +41,7 @@ namespace StockBook
             services.AddSingleton<IEmailSender, EmailSender>();
             services.Configure<EmailOptions>(Configuration);
             services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            services.Configure<TwilioSettings>(Configuration.GetSection("Twilio"));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
