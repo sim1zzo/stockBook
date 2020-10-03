@@ -23,27 +23,27 @@ namespace StockBook.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View();
         }
-        
+
         public async Task<IActionResult> Upsert(int? id)
         {
-            var category = new Category();
-
-            if(id == null)
+            Category category = new Category();
+            if (id == null)
             {
+                //this is for create
                 return View(category);
             }
+            //this is for edit
             category = await _unitOfWork.Category.GetAsync(id.GetValueOrDefault());
-
             if (category == null)
             {
                 return NotFound();
             }
-
             return View(category);
+
         }
 
         [HttpPost]
@@ -54,34 +54,33 @@ namespace StockBook.Areas.Admin.Controllers
             {
                 if (category.Id == 0)
                 {
-                   await _unitOfWork.Category.AddAsync(category);
-                    
+                    await _unitOfWork.Category.AddAsync(category);
+
                 }
                 else
                 {
                     _unitOfWork.Category.Update(category);
                 }
-
                 _unitOfWork.Save();
-                return RedirectToAction(nameof(Index));       
+                return RedirectToAction(nameof(Index));
             }
             return View(category);
         }
 
-        
 
         #region API CALLS
 
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var objFromDb = _unitOfWork.Category.GetAllAsync();
-            return Json(new { data = objFromDb });
+            var allObj = await _unitOfWork.Category.GetAllAsync();
+            return Json(new { data = allObj });
         }
 
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
-            var objFromDb =await  _unitOfWork.Category.GetAsync(id);
+            var objFromDb = await _unitOfWork.Category.GetAsync(id);
             if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Error while deleting" });
@@ -89,10 +88,9 @@ namespace StockBook.Areas.Admin.Controllers
             await _unitOfWork.Category.RemoveAsync(objFromDb);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete Successful" });
+
         }
 
         #endregion
     }
-
-
 }

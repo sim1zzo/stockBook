@@ -22,7 +22,7 @@ namespace StockBook.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IWebHostEnvironment _hostEnvironment ;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
         public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
@@ -34,35 +34,37 @@ namespace StockBook.Areas.Admin.Controllers
         {
             return View();
         }
-        
+
         public async Task<IActionResult> Upsert(int? id)
         {
             IEnumerable<Category> CatList = await _unitOfWork.Category.GetAllAsync();
-            var productVM = new ProductVM()
+            ProductVM productVM = new ProductVM()
             {
                 Product = new Product(),
-                CategoryList = CatList.Select(i=> new SelectListItem { 
+                CategoryList = CatList.Select(i => new SelectListItem
+                {
                     Text = i.Name,
                     Value = i.Id.ToString()
                 }),
-                CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i=> new SelectListItem { 
+                CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                {
                     Text = i.Name,
                     Value = i.Id.ToString()
                 })
             };
-
-            if(id == null)
+            if (id == null)
             {
+                //this is for create
                 return View(productVM);
             }
+            //this is for edit
             productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
-
             if (productVM.Product == null)
             {
                 return NotFound();
             }
-
             return View(productVM);
+
         }
 
         [HttpPost]
@@ -139,13 +141,13 @@ namespace StockBook.Areas.Admin.Controllers
         }
 
 
-
         #region API CALLS
 
+        [HttpGet]
         public IActionResult GetAll()
         {
-            var objFromDb = _unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
-            return Json(new { data = objFromDb });
+            var allObj = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            return Json(new { data = allObj });
         }
 
         [HttpDelete]
@@ -165,10 +167,9 @@ namespace StockBook.Areas.Admin.Controllers
             _unitOfWork.Product.Remove(objFromDb);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete Successful" });
+
         }
 
         #endregion
     }
-
-
 }
