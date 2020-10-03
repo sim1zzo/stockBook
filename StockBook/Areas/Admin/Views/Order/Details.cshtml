@@ -1,5 +1,8 @@
 ﻿@model StockBook.Models.ViewModels.OrderDetailsVM
 @using StockBook.Utility
+@using Microsoft.Extensions.Options
+
+@inject IOptions<StockBook.Utility.StripeSettings> Stripe
 
 
 <form method="post">
@@ -133,7 +136,7 @@
                                 <div class="col-9">
                                     @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
                                     {
-                                        <input asp-for="OrderHeader.Carrier" type="text" class="form-control" />
+                                        <input asp-for="OrderHeader.Carrier" id="carrier" type="text" class="form-control" />
                                     }
                                     else
                                     {
@@ -147,7 +150,7 @@
                                 <div class="col-9">
                                     @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
                                     {
-                                        <input asp-for="OrderHeader.TrackingNumber" type="text" class="form-control" />
+                                        <input asp-for="OrderHeader.TrackingNumber" id="trackingNumber" type="text" class="form-control" />
                                     }
                                     else
                                     {
@@ -170,31 +173,31 @@
                                         <input asp-for="OrderHeader.TransactionId" type="text" readonly class="form-control" />
                                     </div>
                                 </div>
-                            <div class="row my-1">
-                                @if (Model.OrderHeader.TransactionId == null)
-                                {
+                                <div class="row my-1">
+                                    @if (Model.OrderHeader.TransactionId == null)
+                                    {
 
 
-                                <div class="col-3">Payment Due Date</div>
-                                <div class="col-9">
-                                    <input  value="@Model.OrderHeader.PaymentDueDate"readonly type="text" class="form-control" />
+                                        <div class="col-3">Payment Due Date</div>
+                                        <div class="col-9">
+                                            <input value="@Model.OrderHeader.PaymentDueDate" readonly type="text" class="form-control" />
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-3">Payment Date</div>
+                                        <div class="col-9">
+                                            <input value="@Model.OrderHeader.PaymentDueDate" readonly id="paymentDate" type="text" class="form-control" />
+                                        </div>
+                                    }
                                 </div>
-                                }
-                                else
-                                {
-                                <div class="col-3">Payment Date</div>
-                                <div class="col-9">
-                                    <input  value="@Model.OrderHeader.PaymentDueDate" readonly id="paymentDate" type="text" class="form-control" />
-                                </div>
-                                }
-                            </div>
 
-                            <div class="row my-1">
-                                <div class="col-3">Payment Status</div>
-                                <div class="col-9">
-                                    <input  asp-for="OrderHeader.PaymentStatus" type ="text" readonly class="form-control" />
+                                <div class="row my-1">
+                                    <div class="col-3">Payment Status</div>
+                                    <div class="col-9">
+                                        <input asp-for="OrderHeader.PaymentStatus" type="text" readonly class="form-control" />
+                                    </div>
                                 </div>
-                            </div>
                             }
 
                         </div>
@@ -205,19 +208,19 @@
                             <ul class="list-group mb-3">
                                 @foreach (var details in Model.OrderDetails)
                                 {
-                                <li class="list-group-item d-flex justify-content-between p-2">
-                                    <div class="row container">
-                                        <div class="col-8">
-                                            <input type="hidden" asp-for="@details.Id" />
-                                             <h6 class="my-0 text-primary">@details.Product.Title</h6>
-                                            <small class="text-muted">Price : @details.Price</small><br />
-                                            <small class="text-muted">Quantity : @details.Count</small>
+                                    <li class="list-group-item d-flex justify-content-between p-2">
+                                        <div class="row container">
+                                            <div class="col-8">
+                                                <input type="hidden" asp-for="@details.Id" />
+                                                <h6 class="my-0 text-primary">@details.Product.Title</h6>
+                                                <small class="text-muted">Price : @details.Price</small><br />
+                                                <small class="text-muted">Quantity : @details.Count</small>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="text-success">@(String.Format("{0:C}", details.Count*details.Price))</p>
+                                            </div>
                                         </div>
-                                        <div class="col-4">
-                                            <p class="text-success">@(String.Format("{0:C}", details.Count*details.Price))</p>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
                                 }
                                 <li class="list-group-item bg-info">
                                     <div class="row container">
@@ -240,13 +243,48 @@
                                 }
                                 if (Model.OrderHeader.OrderStatus == SD.StatusInProcess)
                                 {
-                                    <input type="submit" value="Ship Order" onclick="validateInput()" class="btn btn-primary form-control" formaction="/Admin/Order/ShipOrder" formmethod="post" />
+                                    <input type="submit" value="Ship Order" onclick="return validateInput()" class="btn btn-primary form-control" formaction="/Admin/Order/ShipOrder" formmethod="post" />
                                 }
 
                             }
                             else
                             {
                                 <label class="btn btn-primary form-control">@Model.OrderHeader.OrderStatus</label>
+                            }
+
+                            @{
+                                var OrderTotalForStripe = Model.OrderHeader.OrderTotal * 100;
+                            }
+                            @if (Model.OrderHeader.PaymentStatus == SD.PaymentStatusDelayPayment &&
+                               Model.OrderHeader.OrderStatus == SD.StatusShipped)
+                            {
+
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                        data-key="@Stripe.Value.PublishableKey"
+                                        data-amount="@OrderTotalForStripe"
+                                        data-template="Stock Book"
+                                        data-labe="Place Order"
+                                        data-descriprion="Get Books, For Less"
+                                        data-locale="auto"
+                                        data-allow-remember-me="false"
+                                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png">
+
+                                </script>
+                                <script>
+                                    document.getElementsByClassName("stripe-button-el")[0].style.display = "none";
+                                </script>
+                                <button type="submit" value="Place Order" class="btn btn-success form-control">Pay Now</button>
+                            }
+                            
+
+
+                            @if (Model.OrderHeader.OrderStatus != SD.StatusRefunded &&
+                             Model.OrderHeader.OrderStatus != SD.StatusCancelled &&
+                             (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee)))
+                            {
+                                <div class=" pt-2">
+                                    <a asp-action="CancelOrder" asp-route-id="@Model.OrderHeader.Id" class="btn btn-danger form-control">Cancel Order</a>
+                                </div>
                             }
 
                         </div>
@@ -256,3 +294,38 @@
         </div>
     </div>
 </form>
+@section Scripts{
+    <script>
+        function validateInput() {
+            var tracking = document.getElementById("trackingNumber").value;
+            var carrier = document.getElementById("carrier").value;
+
+            if (tracking.ToString() == '') {
+                swal("Error", "Please enter tracking number", "error")
+                return false;
+            }
+            else {
+                if (carrier.ToString() == '') {
+                    swal("Error", "Please enter tracking number", "error")
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            var shippingDate = document.getElementById("shippingDate");
+
+            if (shippingDate.value == '1/1/0001') {
+                shippingDate.value = "";
+            }
+
+            var paymentDate = document.getElementById("paymentDate");
+            if (paymentDate.value == "1/1/0001") {
+                paymentDate.value = "";
+            }
+        });
+    </script>
+}

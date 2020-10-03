@@ -43,6 +43,51 @@ namespace StockBook.Areas.Admin.Controllers
             return View(OrderVM);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Details")]
+        public IActionResult Details(string stripeToken)
+        {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == OrderVM.OrderHeader.Id, includeProperties:"ApplicationUser");
+
+            if (stripeToken!=null)
+            {
+                //process the payment
+                var options = new ChargeCreateOptions
+                {
+                    Amount = Convert.ToInt32(orderHeader.OrderTotal *100),
+                    Currency = "usd",
+                    Description = "Order ID: " + orderHeader.Id,
+                    Source = stripeToken
+
+                };
+
+                var service = new ChargeService();
+                var charge = service.Create(options);
+
+                if (charge.BalanceTransactionId == null)
+                {
+                    orderHeader.PaymentStatus = SD.PaymentStatusRejected;
+                }
+                else
+                {
+                    orderHeader.TransactionId = charge.BalanceTransactionId;
+
+                }
+
+                if (charge.Status.ToLower() == "suceeded")
+                {
+                    orderHeader.PaymentStatus = SD.PaymentStatusApproved;
+                    orderHeader.PaymentStatus = DateTime.Now.ToString();
+                }
+
+                _unitOfWork.Save();
+            }
+            
+            return RedirectToAction("Details", "Order", new { id = orderHeader.Id });
+           
+        }
+
         [Authorize(Roles =SD.Role_Admin + "," + SD.Role_Employee)]
         public IActionResult StartProcessing(int id)
         {
@@ -54,9 +99,9 @@ namespace StockBook.Areas.Admin.Controllers
 
         [HttpPost]
         [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
-        public IActionResult ShipOrder(int id)
+        public IActionResult ShipOrder()
         {
-            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(o => o.Id == id);
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(o => o.Id == OrderVM.OrderHeader.Id);
             orderHeader.TrackingNumber = OrderVM.OrderHeader.TrackingNumber;
             orderHeader.Carrier = OrderVM.OrderHeader.Carrier;
             orderHeader.OrderStatus = SD.StatusShipped;
